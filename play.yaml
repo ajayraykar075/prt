@@ -2,17 +2,15 @@
  - name: install apache
    hosts: s1
    become: yes
-   become_user: ubuntu
    tasks:
      - name: install apache
-       apt: name=apache2 state=present
+       apt: name=apache2 update_cache=yes state=present
 
  - name: install nginx
    hosts: s2
    become: yes
-   become_user: ubuntu
    tasks:
      - name: install nginx
-       apt: name=nginx state=present
+       apt: name=nginx update_cache=yes state=present
 
 
