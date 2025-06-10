@@ -1,0 +1,16 @@
+---
+ - name: install apache
+   hosts: s-1
+   become: true
+   tasks:
+     - name: install apache
+       apt: name=apache2 state=present
+
+ - name: install nginx
+   hosts: s-2
+   become: true
+   tasks:
+     - name: install nginx
+       apt: name=nginx state=present
+
+
