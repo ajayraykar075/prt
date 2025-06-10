@@ -1,13 +1,13 @@
 ---
  - name: install apache
-   hosts: s-1
+   hosts: s1
    become_user: ubuntu
    tasks:
      - name: install apache
        apt: name=apache2 state=present
 
  - name: install nginx
-   hosts: s-2
+   hosts: s2
    become_user: ubuntu
    tasks:
      - name: install nginx
