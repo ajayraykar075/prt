@@ -6,11 +6,5 @@
      - name: install apache
        apt: name=apache2 update_cache=yes state=present
 
- - name: install nginx
-   hosts: s2
-   become: yes
-   tasks:
-     - name: install nginx
-       apt: name=nginx update_cache=yes state=present
 
 
