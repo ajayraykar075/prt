@@ -1,6 +1,6 @@
 ---
  - name: install apache
-   hosts: s1
+   hosts: agent
    become: yes
    tasks:
      - name: install apache
